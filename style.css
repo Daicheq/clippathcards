@@ -1,0 +1,68 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Comic Neue', cursive;
+	background: radial-gradient(circle, rgba(43, 44, 46, 1) 13%, rgba(25, 25, 25, 1) 65%);
+}
+
+.card {
+	position: relative;
+	margin: 0 10px;
+	width: 350px;
+	height: 600px;
+	border-radius: 15px;
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.one {
+	background-image: url('./img/portrait-g70167fa5f_1280.jpg');
+}
+.two {
+	background-image: url('./img/man-g5159f78a9_1280.jpg');
+}
+
+i {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	padding: 5px;
+	color: white;
+	font-size: 32px;
+	z-index: 100;
+}
+
+i:hover {
+	cursor: crosshair;
+}
+
+i:hover ~ .text {
+	clip-path: circle(130% at 50% 100%);
+}
+
+.text {
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 15px 20px;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.83);
+	color: white;
+	clip-path: circle(0% at 50% 100%);
+	transition: clip-path 0.8s;
+}
